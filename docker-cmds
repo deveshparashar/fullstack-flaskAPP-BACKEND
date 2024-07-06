@@ -1,0 +1,30 @@
+
+docker login
+
+docker build -t flask_app_backend .
+
+docker run -d -p 5000:5000 03dcfd0d5293030e7595
+
+docker exec -it 7e0a0e1c3102b983c4ec  /bin/sh  
+
+docker tag flask_app_backend deveshkkr/flask_app_backend:latest
+
+docker push deveshkkr/flask_app_backend:latest
+
+
+#### putting environment variable while runnig docker container
+
+docker run -d \ 
+
+-p 5000:5000 \
+
+-e DB_HOST=sql12.freesqldatabase.com \
+-e DB_DATABASE=sql12717114 \
+-e DB_USER=sql12717114 \
+-e DB_PASSWORD=ugrUHPjwx2 \
+-e DB_CHARSET=utf8mb4 \
+6102f001c67b94e5ed18 
+
+
+
+docker run -d -p 5000:5000 -e DB_HOST=sql12.freesqldatabase.com -e DB_DATABASE=sql12717114 -e DB_USER=sql12717114 -e DB_PASSWORD=ugrUHPjwx2 -e DB_CHARSET=utf8mb4 2dfa71d6724bec2197e 
